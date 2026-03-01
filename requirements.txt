@@ -11,3 +11,4 @@ sentence-transformers
 transformers
 rank_bm25
 pypdf
+matplotlib
