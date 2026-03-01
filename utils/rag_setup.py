@@ -67,8 +67,8 @@ def setup_rag_pipeline(pdf_path="resnet_paper.pdf"):
         return [item["doc"] for item in ranked_docs[:2]]
     
     # 4. Simple local QA setup (using explicit model and tokenizer to avoid pipeline task inference issues)
-    # Using a small Flan-T5 model to minimize memory footprint & keep local inference fast.
-    model_id = "google/flan-t5-small"
+    # Using a larger Flan-T5 base model to improve QA inference quality and prevent degradation across queries.
+    model_id = "google/flan-t5-base"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     
