@@ -17,7 +17,7 @@ def render():
         try:
             image = Image.open(uploaded_file).convert('RGB')
             # Display original image
-            st.image(image, caption='Uploaded Image', width="stretch")
+            st.image(image, caption='Uploaded Image', use_container_width=True)
             
             with st.spinner("Processing image through ResNet-18..."):
                 input_batch = preprocess_image(image)
