@@ -1,0 +1,13 @@
+streamlit
+plotly
+torch
+torchvision
+langchain
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+chromadb
+sentence-transformers
+transformers
+rank_bm25
+pypdf
